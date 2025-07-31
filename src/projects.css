@@ -1,0 +1,158 @@
+#list-projects {
+  margin-top: 50px;
+  background: linear-gradient(to right, var(--tertiary-color), var(--primary-color));
+  padding: 2rem 10rem;
+  text-align: left;
+  min-height: 0; /* It allows content to define height */
+}
+
+.lps-sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.lps-sub-header h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 0;
+  text-align: left;
+}
+
+.lps-sub-header h2 span {
+  color: var(--text-color3);
+}
+
+.back-button {
+  color: var(--text-color1);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.back-button:hover {
+  color: var(--text-color3);
+}
+
+.lps-list-desc {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+
+.lps-projects-category {
+  margin-bottom: 2.5rem;
+}
+
+.lps-projects-category-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--text-color1);
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.lps-projects-category-title span {
+  color: var(--text-color3);
+}
+
+.lps-projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.lps-project-tile {
+  width: 250px;
+  border: 1px solid var(--text-color3);
+  background: rgba(20, 20, 30, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 180px;
+  box-sizing: border-box;
+}
+
+.lps-project-tile h3 {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--text-color3);
+  margin: 0;
+  width: 100%;
+}
+
+.lps-project-tile p {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--text-color3);
+  margin: 0;
+  width: 100%;
+  min-height: 48px; /* It makes sure that the description area is consistent */
+  flex: 1 1 auto;   /* It allows description to grow/shrink */
+  display: flex;
+  align-items: flex-start;
+}
+
+.lps-project-tile img {
+  width: 100%;
+  border-bottom: 1px solid var(--text-color3);
+  display: block;
+}
+
+.lps-project-tile .view-button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  margin-top: auto;
+  height: 40px; /* This sets a fixed height for consistency */
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.lps-project-tile .view-button a {
+  color: var(--text-color1);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lps-project-tile .view-button:hover,
+.lps-project-tile .view-button:focus-within {
+  background-color: var(--text-color3);
+}
+
+@media (max-width: 900px) {
+  #list-projects {
+    padding: 1rem 0.5rem;
+  }
+  .projects-grid {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .project-tile {
+    width: 90vw;
+    min-width: 220px;
+    max-width: 350px;
+  }
+  .projects-category-title,
+  .lps-list-desc,
+  .lps-sub-header h2 {
+    text-align: left;
+    margin-left: 0;
+  }
+}
