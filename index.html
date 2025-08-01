@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="public/images/EMJAY-LIGHT.png">
@@ -15,12 +16,25 @@
       <img src="public/images/EMJAY-LIGHT.png" alt="Emjay Logo" />
       <span>Emjay</span>
     </div>
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="navbar-links">
       <li><a href="#welcome-section"><span>#</span>home</a></li>
       <li><a href="#projects"><span>#</span>projects</a></li>
       <li><a href="#about-me"><span>#</span>about-me</a></li>
       <li><a href="#contacts"><span>#</span>contacts</a></li>
     </ul>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-menu" id="sidebarMenu">
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="#welcome-section"><span>#</span>home</a></li>
+        <li><a href="#projects"><span>#</span>projects</a></li>
+        <li><a href="#about-me"><span>#</span>about-me</a></li>
+        <li><a href="#contacts"><span>#</span>contacts</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Welcome Section -->
@@ -223,6 +237,30 @@
   window.addEventListener('scroll', highlightNav);
   window.addEventListener('DOMContentLoaded', highlightNav);
 </script>
+<script>
+  // Sidebar menu logic for mobile
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebarMenu = document.getElementById('sidebarMenu');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+  const sidebarClose = document.getElementById('sidebarClose');
+  const sidebarLinks = sidebarMenu.querySelectorAll('a');
+
+  function openSidebar() {
+    sidebarMenu.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSidebar() {
+    sidebarMenu.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  sidebarToggle.addEventListener('click', openSidebar);
+  sidebarClose.addEventListener('click', closeSidebar);
+  sidebarOverlay.addEventListener('click', closeSidebar);
+  sidebarLinks.forEach(link => link.addEventListener('click', closeSidebar));
+</script>
+
 </body>
 </html>
 

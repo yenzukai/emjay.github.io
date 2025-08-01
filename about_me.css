@@ -1,6 +1,6 @@
 /* About Me Section */
 #all-about-me {
-  margin-top: 50px;
+  margin-top: 40px;
   background: linear-gradient(to right, var(--tertiary-color), var(--primary-color));
   padding: 2rem 10rem;
   text-align: left;
@@ -142,8 +142,8 @@
   background: rgba(20, 20, 30, 0.7);
   border: 1px solid var(--text-color3);
   padding: 1rem 1.5rem;
-  min-width: 180px;
-  flex: 1 1 160px;
+  min-width: 300px;
+  flex: 1 1 100px;
   margin-bottom: 1rem;
 }
 
@@ -202,7 +202,7 @@
   align-items: center;
   min-width: 280px;
   max-width: 400px;
-  flex: 1 1 320px;
+  flex: 1 1 280px;
 }
 
 .certificate-card img {
@@ -260,8 +260,8 @@
   padding: 1rem 1.5rem;
   color: var(--text-color1);
   font-size: 0.95rem;
-  min-width: 180px;
-  flex: 1 1 220px;
+  min-width: 400px;
+  flex: 1 1 100px;
   margin-bottom: 1rem;
   box-sizing: border-box;
 }
@@ -335,12 +335,10 @@
     gap: 0.7rem;
     align-items: stretch;
   }
-  .skills-box,
-  .certificate-card,
-  .fun-fact-box {
+  .skills-box {
     min-width: unset;
     max-width: 100%;
-    padding: 0.8rem 0.7rem;
+    padding: 0.7rem 0.7rem;
     font-size: 0.95rem;
   }
   .skills-box h3 {
@@ -358,7 +356,7 @@
     align-items: flex-start;
     min-width: unset;
     max-width: 100%;
-    padding: 0.8rem 0.7rem;
+    padding: 0.7rem 0.7rem;
   }
   .certificate-card img {
     width: 80vw;
@@ -375,7 +373,7 @@
   }
   .fun-fact-box {
     font-size: 0.95rem;
-    padding: 0.8rem 0.7rem;
+    padding: 0.7rem 0.7rem;
     min-width: unset;
     max-width: 100%;
   }

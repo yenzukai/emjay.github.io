@@ -83,6 +83,87 @@ body {
   transition: color 0.3s;
 }
 
+.sidebar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 201;
+  margin-top: -2.40rem;
+  margin-left: auto;
+  margin-right: 0.625rem;
+}
+
+.sidebar-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--text-color1);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.sidebar-menu {
+  display: none;
+  position: fixed;
+  top: 0; right: 0;
+  width: 70vw;
+  max-width: 320px;
+  height: 100vh;
+  background: var(--primary-color);
+  box-shadow: 2px 0 16px rgba(0,0,0,0.25);
+  z-index: 202;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  animation: sidebar-slide-in 0.25s;
+}
+
+@keyframes sidebar-slide-in {
+  from { transform: translateX(100%);}
+  to { transform: translateX(0);}
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-menu li a {
+  color: var(--text-color1);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+}
+
+.sidebar-menu li a span {
+  color: var(--text-color3);
+}
+
+.sidebar-close {
+  background: none;
+  border: none;
+  color: var(--text-color3);
+  font-size: 2.2rem;
+  position: absolute;
+  top: 0.30rem;
+  right: 2.50rem;
+  cursor: pointer;
+}
+
 #welcome-section {
   height: 100vh;
   background: linear-gradient(to right, var(--tertiary-color), var(--primary-color));
@@ -652,18 +733,17 @@ footer {
   .navbar-logo {
     margin-bottom: 0.5rem;
   }
-  #navbar .navbar-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    align-items: flex-start;
+  .sidebar-toggle {
+    display: flex;
   }
-  #navbar .navbar-links li {
-    margin: 0;
+  .navbar-links {
+    display: none !important;
   }
-  #navbar .navbar-links li a {
-    font-size: 1rem;
-    padding: 0.2rem 0;
+  .sidebar-menu.active {
+    display: flex;
+  }
+  .sidebar-overlay.active {
+    display: block;
   }
 
   .welcome-flex {
@@ -740,8 +820,8 @@ footer {
     padding: 0 0.2rem;
   }
   .project-tile {
-    min-width: 80vw;
-    max-width: 90vw;
+    min-width: 70vw;
+    max-width: 80vw;
     width: 90vw;
     margin-top: 0;
   }
@@ -782,13 +862,10 @@ footer {
     padding: 0.25rem 0.7rem;
   }
   .about-me-image {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
   .about-me-image img {
-    width: 60vw;
-    max-width: 260px;
+    display: none;
   }
   .about-me-image::before {
     width: 60vw;
