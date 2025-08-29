@@ -40,9 +40,16 @@
   <!-- Welcome Section -->
   <section id="welcome-section">
     <div class="welcome-flex">
-      <div class="welcome-text">
-        <h1 id="cmd-typing"></h1>
-        <p id="cmd-subtyping"></p>
+        <div class="terminal-window">
+          <div class="terminal-header">
+              <span class="terminal-button close"></span>
+              <span class="terminal-button minimize"></span>
+              <span class="terminal-button maximize"></span>
+          </div>
+          <div class="welcome-text">
+            <h1 id="cmd-typing"></h1>
+            <p id="cmd-subtyping"></p>
+          </div>
       </div>
       <div class="welcome-image-glow">
         <img src="public/images/EMJAY-STROKE.png" alt="Emjay Stroke Image" class="logo-image" />
@@ -107,8 +114,8 @@
     </div>
     <div class="about-me-content">
     <div class="about-me-text">
-      <p>Hello, I'm Martin!</p>
-      <p>A fresh graduate from Partido State University with a degree in Information Technology. I recently graduated Cum Laude and gained both academic and practical experience. I worked for 5 years as a network administrator while studying, where I handled Ubiquiti, MikroTik, pfSense, and other networking systems. I also developed a Smart Mirror AI project for my thesis, integrating IoT, Raspberry Pi, and APIs. I’m now excited to begin my professional career and contribute my skills to a dynamic organization.</p>
+      <p>Hello, I'm <span>Martin!</span></p>
+      <p style="text-indent: 40px;">A fresh graduate from Partido State University with a degree in Information Technology. I recently graduated Cum Laude and gained both academic and practical experience. I worked for 5 years as a network administrator while studying, where I handled Ubiquiti, MikroTik, pfSense and other systems. I also developed a smart mirror AI project for my thesis, integrating IoT, Raspberry Pi, and APIs. I’m now excited to begin my professional career and contribute my skills to a dynamic organization.</p>
       <div class="about-me-skills">
         <span class="skill-badge">Web Development</span>
         <span class="skill-badge">Network Administration</span>
@@ -134,7 +141,7 @@
     </div>
     <div class="contact-section-content">
       <div class="contact-text">
-        <p>If you would like to get in touch, feel free to reach out via email or phone. I’m always open to discussing new opportunities, collaborations, or just connecting with fellow tech enthusiasts.</p>
+        <p style="text-indent: 40px;">If you would like to get in touch with me, feel free to reach out via my email address or phone number. I’m always open to discussing new opportunities, collaborations, or just connecting with fellow tech enthusiasts.</p>
         <a href="public/cv/MartinJamesRojas_CV.pdf" class="download-cv-btn" target="_blank" download>
           Download CV
         </a>
@@ -260,7 +267,19 @@
   sidebarOverlay.addEventListener('click', closeSidebar);
   sidebarLinks.forEach(link => link.addEventListener('click', closeSidebar));
 </script>
+<script>
+  const navbar = document.querySelector("#navbar");
 
+  document.addEventListener("scroll", () => {
+    const scrolled = document.scrollingElement.scrollTop;
+
+    if (scrolled > 80) { // Adjust '80' to the desired scroll position for color change
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
 </body>
 </html>
 

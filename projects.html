@@ -40,11 +40,7 @@
 
   <!-- Projects Section -->
   <section id="list-projects">
-    <div class="lps-sub-header">
-      <h2><a href="./index.html#projects" class="back-button">home</a><span>/</span>projects</h2>
-    </div>
     <h3 class="lps-list-desc">List of my projects</h3>
-
     <div class="lps-projects-category">
       <h2 class="lps-projects-category-title"><span>#</span>complete-projects</h2>
       <div class="lps-projects-grid">
@@ -75,7 +71,7 @@
         <div class="lps-project-tile">
           <img src="public/images/color_ePoblacionCertify.png" alt="Complete Project Six Screenshot">
           <h3>ePobalicionCertify</h3>
-          <p>A government-based website that provides seamless and accessible online certification services to users</p>
+          <p>A web application that provides online local government certification services to users</p>
           <button class="view-button">
             <a href="https://github.com/yenzukai/ePoblacionCertify.git" target="_blank">Github <-></a>
           </button>
@@ -215,6 +211,18 @@
   sidebarOverlay.addEventListener('click', closeSidebar);
   sidebarLinks.forEach(link => link.addEventListener('click', closeSidebar));
 </script>
+<script>
+  const navbar = document.querySelector("#navbar");
 
+  document.addEventListener("scroll", () => {
+    const scrolled = document.scrollingElement.scrollTop;
+
+    if (scrolled > 80) { // Adjust '80' to the desired scroll position for color change
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
 </body>
 </html>
