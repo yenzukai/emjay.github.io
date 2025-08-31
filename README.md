@@ -3,22 +3,21 @@
 [![Website](https://img.shields.io/badge/Visit-Portfolio-blue?style=for-the-badge&logo=google-chrome)](https://yenzukai.github.io/emjay.github.io)
 
 ## 📌 Overview
-**Emjay** is my personal portfolio website that highlights my background, projects, education, skills, and professional experiences.  
-It serves as an online representation of my work and growth in the field of Information Technology.
+**Emjay** is my personal portfolio website that showcases my professional background, projects, education, skills, and work experiences. The website serves as an online representation of my work and growth in the field of Information Technology specifically in networking and software development.
 
 ## ✨ Features
-- 🧑‍💻 **About Me** – Personal background and career overview  
-- 📂 **Projects** – A showcase of academic, freelance, and professional projects  
-- 🎓 **Education** – Academic achievements and credentials  
-- 🛠 **Skills** – Technical expertise and tools I work with  
-- 📜 **Experiences** – Professional and freelance experiences  
+- **About Me** – Academic background and career overview  
+- **Projects** – A showcase of academic, freelance, and professional projects  
+- **Certifications** – Online course certificates and credentials
+- **Skills** – Technical expertise and tools I work with  
+- **Contacts** – Shows the contact details (e.g. phone number, email address, linkedin, behance, figma, etc.)
 
 ## 🚀 Tech Stack
 The website is built using:
 - **HTML5 / CSS3**
 - **JavaScript**
 - **Bootstrap** (for styling and responsive design)
-- ReactJS (upcoming soon!)
+- **ReactJS** (upcoming soon!)
 - **GitHub Pages** (for deployment and hosting)
 
 ## 🌐 Live Demo
