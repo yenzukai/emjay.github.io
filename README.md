@@ -21,7 +21,7 @@ The website is built using:
 - **GitHub Pages** (for deployment and hosting)
 
 ## Live Demo
-👉 Visit here: [emjay.github.io](https://yenzukai.github.io/emjay.github.io)
+Visit here: [emjay.github.io](https://yenzukai.github.io/emjay.github.io)
 
 ## Contact
 If you’d like to connect or collaborate, feel free to reach out:
